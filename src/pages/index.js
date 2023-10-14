@@ -2,25 +2,32 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Register from '../components/frontpage/register'
 import Login from '../components/frontpage/login'
+import Header from '../components/header/header'
 import { useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [login, setLogin] = useState(true)
-  const toLogin = () =>{
+  const toLogin = () => {
     setLogin(true)
   }
-  const toRegister = () =>{
+  const toRegister = () => {
     setLogin(false)
   }
   return (
-    <main className="min-h-screen flex items-center justify-evenly px-20">
-      <Image src="/frontpage.jpeg" alt="frontpage" width={500} height={500} />
-  
-      {
-        login?<Login toRegister={toRegister}/>:<Register toLogin={toLogin}/>
-      }{/* <Register /> */}
-      {/* <Login /> */}
+    <main className='min-h-screen flex flex-col  bg-beige'>
+      <Header />
+      <div className="flex-grow h-full flex items-center justify-evenly px-20">
+        <Image src="/frontpage.png" alt="frontpage" width={500} height={500} />
+
+        {
+          login ? <Login toRegister={toRegister} /> : <Register toLogin={toLogin} />
+        }
+      </div>
+      <h2 className='text-center flex-grow text-gray-500 text-3xl font-semibold'>
+        <p className='pb-3'>Build the test, take the test</p>
+        <p className='pb-3'>Participation matters, and you matter</p>
+      </h2>
     </main>
   )
 }
