@@ -2,7 +2,8 @@ export default function Register() {
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="bg-white p-8 rounded-lg shadow-lg w-96">
-                <h2 className="text-2xl font-semibold mb-6">Register</h2>
+                <h2 className="text-2xl font-semibold mb-2">Register</h2>
+                <h6 className="block text-base pb-2 text-gray-500">Already have an account? Login here</h6>
                 <form>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-600">Email</label>
