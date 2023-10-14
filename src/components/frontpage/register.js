@@ -1,9 +1,10 @@
-export default function Register() {
+export default function Register(props) {
+    const toLogin = props.toLogin;
     return (
         <div className="min-h-screen flex items-center justify-center">
             <div className="bg-white p-8 rounded-lg shadow-lg w-96">
                 <h2 className="text-2xl font-semibold mb-2">Register</h2>
-                <h6 className="block text-base pb-2 text-gray-500">Already have an account? Login here</h6>
+                <h6 className="block text-base pb-2 text-gray-500">Already have an account? <span onClick={toLogin} className="cursor-pointer font-medium text-cyan-600">Login here</span></h6>
                 <form>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-600">Email</label>
