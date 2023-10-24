@@ -24,9 +24,9 @@ export default function Home() {
           login ? <Login toRegister={toRegister} /> : <Register toLogin={toLogin} />
         }
       </div>
-      <h2 className='text-center flex-grow text-gray-500 text-3xl font-semibold'>
-        <p className='pb-3'>Build the test, take the test</p>
-        <p className='pb-3'>Participation matters, and you matter</p>
+      <h2 className='text-center flex-grow  font-semibold'>
+        <p className='pb-3 text-3xl text-gray-500'>Participation matters, and you matter</p>
+        <p className='text-xl pb- text-gray-400'>Personal web project of Aster Wu</p>
       </h2>
     </main>
   )

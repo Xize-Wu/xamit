@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
 import Header from '@/components/header/header'
-const NoSSR = dynamic(() => import("@/components/frontpage/my_tests"), { ssr: false })
+const NoSSR = dynamic(() => import("@/components/frontpage/Info"), { ssr: false })
 
 
 export default function Temp_Test() {
